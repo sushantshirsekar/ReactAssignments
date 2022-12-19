@@ -36,10 +36,10 @@ function App() {
   return (
     <div>
       <h2>Expense Items!</h2>
-      <Card className="expenses">
+      <Card className="expenses" >
       {data.map((ele) => {
         return (
-          <ExpenseItem
+          <ExpenseItem id={ele.id}
             key={ele.id}
             title={ele.title}
             location={ele.location}
@@ -48,6 +48,7 @@ function App() {
           />
         );
       })}
+      
       </Card>
     </div>
   );
