@@ -29,12 +29,38 @@
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  /* background-color: #40005d; */
-  background-color: rgb(25, 25, 25);
+  background-color: #40005d;
+  /* background-color: rgb(25, 25, 25); */
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
+  margin-left: 7px;
 }
+
+.expense-item__delete {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  /* background-color: #40005d; */
+  background-color: rgb(159, 2, 2);
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-left: 7px;
+}
+
+.expense-item__edit {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  /* background-color: #40005d; */
+  background-color: navy;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-left: 7px;
+}
+
 
 @media (min-width: 580px) {
   .expense-item__description {

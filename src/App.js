@@ -9,7 +9,7 @@ function App() {
       title: "Car Insurance",
       location: "PhonePe",
       date: new Date(2021, 11, 30),
-      amount: 100,
+      amount: 900,
     },
     {
       id: 2,
