@@ -1,7 +1,8 @@
 import "./components/Expenses/Expenses.css";
-import Card from "./components/UI/Card";
-import ExpenseItem from "./components/Expenses/ExpenseItem";
+// import Card from "./components/UI/Card";
+import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpenses/NewExpense";
+import React, { useState } from "react";
 
 function App() {
   const data = [
@@ -30,22 +31,20 @@ function App() {
       amount: 700,
     },
   ];
+  const [enteredData, setEnteredData] = useState(data);
+    const addExpense =(exdata)=>{
+    console.log('In App.js');
+    setEnteredData((d)=>{
+      return [exdata, ...d]
+    })
+    console.log(enteredData);
+  }
   return (
     <div>
-      <NewExpense />
-      <Card className="expenses" >
-      {data.map((ele) => {
-        return (
-          <ExpenseItem id={ele.id}
-            key={ele.id}
-            title={ele.title}
-            date={ele.date}
-            amount={ele.amount}
-          />
-        );
-      })}
+      <NewExpense onExpenseAdd={addExpense} />
       
-      </Card>
+      <Expenses items = {enteredData} />
+      
     </div>
   );
 }

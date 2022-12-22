@@ -1,5 +1,4 @@
-import React, {useState} from "react";
-
+import React, { useState } from "react";
 
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
@@ -14,34 +13,39 @@ function ExpenseItem(props) {
   //   console.log(amount);
   // }
 
-
   const editClick = () => {
-    setTitle('Updated!!');
+    setTitle("Updated!!");
     console.log(title);
-  }
+  };
   return (
-    <div id={props.id}>
-      <Card className="expense-item">
-        <ExpenseDate date={props.date} />
-        <div className="expense-item__description">
-          <h2>{title}</h2>
-        </div>
-        {/* <button className="expense-item__price" onClick={amountClick}>$</button> */}
-        <div className="expense-item__price">$ {props.amount}</div> 
-        <button className="expense-item__edit" onClick={editClick} >Edit</button>
-        <button className="expense-item__delete"
-          onClick={()=> {
-            const parentNode = document.getElementById('parentNode');
-            const childNode = document.getElementById(props.id);
-            console.log(parentNode);
-            console.log(childNode);
-            parentNode.removeChild(childNode);
-          }}
-        >
-          Delete
-        </button>
+    
+      <Card className="expense-item" id={props.id}>
+        
+          <ExpenseDate date={props.date} />
+          <div className="expense-item__description">
+            <h2>{title}</h2>
+          </div>
+          {/* <button className="expense-item__price" onClick={amountClick}>$</button> */}
+          <div className="expense-item__price">$ {props.amount}</div>
+          <button className="expense-item__edit" onClick={editClick}>
+            Edit
+          </button>
+          <button
+            className="expense-item__delete"
+            onClick={() => {
+              const parentNode = document.getElementById("parentNode");
+              const childNode = document.getElementById(props.id);
+              console.log(parentNode);
+              console.log(childNode);
+              parentNode.removeChild(childNode);
+            }}
+          >
+            Delete
+          </button>
+        
       </Card>
-    </div>
+      
+   
   );
 }
 
