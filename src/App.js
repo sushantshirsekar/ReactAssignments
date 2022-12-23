@@ -5,7 +5,7 @@ import NewExpense from "./components/NewExpenses/NewExpense";
 import React, { useState } from "react";
 
 function App() {
-  const data = [
+  const DummyExpenses = [
     {
       id: 1,
       title: "Car Insurance",
@@ -31,11 +31,10 @@ function App() {
       amount: 700,
     },
   ];
-  const [enteredData, setEnteredData] = useState(data);
-    const addExpense =(exdata)=>{
-    console.log('In App.js');
-    setEnteredData((d)=>{
-      return [exdata, ...d]
+  const [enteredData, setEnteredData] = useState(DummyExpenses);
+    const addExpense =(expense)=>{
+    setEnteredData((previousExpense)=>{
+      return [expense, ...previousExpense]
     })
     console.log(enteredData);
   }

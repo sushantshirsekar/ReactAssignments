@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 
 function ExpenseItem(props) {
-  const [title, setTitle] = useState(props.title);
+  // const [title, setTitle] = useState(props.title);
   // const [amount, setAmount] = useState(props.amount);
 
   // const amountClick = () => {
@@ -13,21 +13,21 @@ function ExpenseItem(props) {
   //   console.log(amount);
   // }
 
-  const editClick = () => {
-    setTitle("Updated!!");
-    console.log(title);
-  };
+  // const editClick = () => {
+  //   setTitle("Updated!!");
+  //   console.log(title);
+  // };
   return (
     
-      <Card className="expense-item" id={props.id}>
+      <Card className="expense-item" >
         
           <ExpenseDate date={props.date} />
           <div className="expense-item__description">
-            <h2>{title}</h2>
+            <h2>{props.title}</h2>
           </div>
           {/* <button className="expense-item__price" onClick={amountClick}>$</button> */}
           <div className="expense-item__price">$ {props.amount}</div>
-          <button className="expense-item__edit" onClick={editClick}>
+          {/* <button className="expense-item__edit" onClick={editClick}>
             Edit
           </button>
           <button
@@ -42,7 +42,7 @@ function ExpenseItem(props) {
           >
             Delete
           </button>
-        
+         */}
       </Card>
       
    
