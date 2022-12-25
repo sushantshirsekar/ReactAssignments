@@ -17,7 +17,9 @@ function ExpenseItem(props) {
   //   setTitle("Updated!!");
   //   console.log(title);
   // };
+
   return (
+    <li>
     <Card className='expense-item'>
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
@@ -25,6 +27,7 @@ function ExpenseItem(props) {
       </div>
       <div className="expense-item__price">$ {props.amount}</div>
     </Card>
+    </li>
   );
 }
 
