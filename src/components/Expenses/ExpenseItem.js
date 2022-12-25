@@ -18,34 +18,13 @@ function ExpenseItem(props) {
   //   console.log(title);
   // };
   return (
-    
-      <Card className="expense-item" >
-        
-          <ExpenseDate date={props.date} />
-          <div className="expense-item__description">
-            <h2>{props.title}</h2>
-          </div>
-          {/* <button className="expense-item__price" onClick={amountClick}>$</button> */}
-          <div className="expense-item__price">$ {props.amount}</div>
-          {/* <button className="expense-item__edit" onClick={editClick}>
-            Edit
-          </button>
-          <button
-            className="expense-item__delete"
-            onClick={() => {
-              const parentNode = document.getElementById("parentNode");
-              const childNode = document.getElementById(props.id);
-              console.log(parentNode);
-              console.log(childNode);
-              parentNode.removeChild(childNode);
-            }}
-          >
-            Delete
-          </button>
-         */}
-      </Card>
-      
-   
+    <Card className='expense-item'>
+      <ExpenseDate date={props.date} />
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
+      </div>
+      <div className="expense-item__price">$ {props.amount}</div>
+    </Card>
   );
 }
 

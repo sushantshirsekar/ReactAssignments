@@ -39,7 +39,7 @@ function App() {
     console.log(enteredData);
   }
   return (
-    <div>
+    <div className="bg">
       <NewExpense onExpenseAdd={addExpense} />
       
       <Expenses items = {enteredData} />
