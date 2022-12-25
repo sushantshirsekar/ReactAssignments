@@ -21,7 +21,7 @@ function App() {
     {
       id: 3,
       title: "Dinner",
-      date: new Date(2021, 0, 12),
+      date: new Date(2019, 0, 12),
       amount: 1000,
     },
     {
@@ -29,6 +29,12 @@ function App() {
       title: "Lunch",
       date: new Date(2021, 3, 28),
       amount: 700,
+    },
+    {
+      id: 5,
+      title: "Christmas",
+      date: new Date(2022, 11, 25),
+      amount: 100,
     },
   ];
   const [enteredData, setEnteredData] = useState(DummyExpenses);
@@ -38,10 +44,11 @@ function App() {
     })
     console.log(enteredData);
   }
+  
+
   return (
-    <div className="bg">
-      <NewExpense onExpenseAdd={addExpense} />
-      
+    <div>
+      <NewExpense onExpenseAdd={addExpense}></NewExpense>
       <Expenses items = {enteredData} />
       
     </div>
